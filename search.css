@@ -1,3 +1,11 @@
+:root {
+  --lg-background: #F7F9FC;
+  --cards-background: #fff;
+  --border-color: #d1d2d6;
+  --search-icons-placeholder-color: #949494;
+  --highlight-color: #fff;
+  --link-color: #222222;
+}
 /*------------------ search -----------------*/
 
 input[type='search']::-webkit-search-decoration,
@@ -21,8 +29,8 @@ input[type='search']::-webkit-search-results-decoration {
   padding-left: 35px;
   font-size: medium;
   border: none;
-  border-top: 1px solid lightgray;
-  background-color: #f7f9fc;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--lg-background);
 }
 .ais-SearchBox-input:focus {
   outline: none;
@@ -30,12 +38,12 @@ input[type='search']::-webkit-search-results-decoration {
 .ais-SearchBox-input::placeholder {
   font-family: YS Text, Arial, Helvetica, sans-serif;
   font-size: 14px;
-  color: #949494;
+  color: var(--search-icons-placeholder-color);
 }
 .ais-SearchBox-submitIcon path {
   margin: 0;
   width: 100%;
-  fill: #949494;
+  fill: var(--search-icons-placeholder-color);
 }
 .ais-SearchBox-submitIcon {
   width: 20px;
@@ -43,7 +51,7 @@ input[type='search']::-webkit-search-results-decoration {
   position: absolute;
   top: 12px;
   left: 12px;
-  fill: #f7f9fc;
+  fill: var(--lg-background);
   cursor: pointer;
 }
 .search-empty {
@@ -54,9 +62,9 @@ input[type='search']::-webkit-search-results-decoration {
 /*------------------ search close button -----------------*/
 
 #close-search {
-  background-color: #f7f9fc;
-  border: 0 solid grey;
-  color: #949494;
+  background-color: var(--lg-background);
+  color: var(--search-icons-placeholder-color);
+  border: 0;
   padding-left: 10px;
   /* padding-top: 2px; */
   position: absolute;
@@ -70,7 +78,7 @@ input[type='search']::-webkit-search-results-decoration {
 /*------------------ hits -----------------*/
 
 #hits-container {
-  background-color: #f7f9fc;
+  background-color: var(--lg-background);
   /* display: none; */
   /* border: 1px solid grey; */
   flex-direction: column;
@@ -81,7 +89,7 @@ input[type='search']::-webkit-search-results-decoration {
   width: 0; /* width of the entire scrollbar */
 }
 #search-note {
-  background-color: #f7f9fc;
+  background-color: var(--lg-background);
   height: 100%;
   padding-bottom: 1px;
 }
@@ -89,9 +97,9 @@ input[type='search']::-webkit-search-results-decoration {
   margin: 10px 10px 9px;
   padding: 18px;
   padding-top: 12px;
-  background-color: white;
+  background-color: var(--cards-background);
   border-radius: 4px;
-  border: 1px solid #dfe5ee;
+  border: 1px solid var(--border-color);
 }
 #search-note-spacer {
   width: 100%;
@@ -111,17 +119,17 @@ a.search-note-link:link,
 a.search-note-link:visited,
 a.search-note-link:hover,
 a.search-note-link:active {
-  color: #2b2b2b;
+  color: var(--link-color);
   text-decoration: underline;
 }
 #search-hits {
   height: 351px;
-  background-color: #f7f9fc;
+  background-color: var(--lg-background);
   z-index: 200;
 }
 .ais-Hits-list {
   list-style: none;
-  background-color: #f7f9fc;
+  background-color: var(--lg-background);
   margin: 0;
   padding-left: 0;
   padding-top: 10px;
@@ -133,9 +141,9 @@ a.search-note-link:active {
   display: block;
   margin: 0 10px 9px;
   padding: 15px;
-  background-color: white;
+  background-color: var(--cards-background);
   border-radius: 4px;
-  border: 1px solid #dfe5ee;
+  border: 1px solid var(--border-color);
 }
 .search-hit-text {
   margin: 0;
@@ -148,12 +156,8 @@ a.search-note-link:active {
   font-size: 13px;
   white-space: pre-wrap;
 }
-.search-hit-description {
-  font-style: italic;
-  color: #5c6370;
-}
 .ais-Highlight-highlighted {
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--highlight-color);
 }
 /* seems like they changed highlighting style */
 em {
@@ -166,21 +170,27 @@ em {
 .ais-Hits--empty {
   margin: 10px;
   padding: 10px 17px;
-  background-color: white;
+  background-color: var(--cards-background);
   border-radius: 4px;
-  border: 1px solid #dfe5ee;
+  border: 1px solid var(--border-color);
   justify-content: center;
   font-size: 14px;
 }
+
+/* temp class for hljs-comment */
+.search-hit-description {
+  font-style: italic;
+  color: #5c6370;
+}
 /* .hljs-string {
-        color: #32a846;
-      }
-      .print {
-        color: #ca8d3d;
-      }
-      .hljs-number {
-        color: #56b6c2;
-      }
-      .hljs-build_in {
-        color: #c678dd;
-      } */
+  color: #32a846;
+}
+.print {
+  color: #ca8d3d;
+}
+.hljs-number {
+  color: #56b6c2;
+}
+.hljs-build_in {
+  color: #c678dd;
+} */
