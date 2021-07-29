@@ -110,15 +110,15 @@ function start() {
     searchClient,
     routing: false,
     searchFunction: function (helper) {
-      var searchResults = document.querySelector('#hits');
+      var searchResults = document.querySelector('#search-hits');
       if (helper.state.query === '') {
         searchResults.style.display = 'none';
-        document.querySelector('#note').style.display = 'block';
+        document.querySelector('#search-note').style.display = 'block';
         return;
       }
       helper.search();
       searchResults.style.display = 'block';
-      document.querySelector('#note').style.display = 'none';
+      document.querySelector('#search-note').style.display = 'none';
     },
   });
 
@@ -135,11 +135,11 @@ function start() {
 
   search.addWidgets([
     instantsearch.widgets.hits({
-      container: '#hits',
+      container: '#search-hits',
       escapeHTML: false,
       templates: {
         item: `
-          <div class='hits'>
+          <div class='search-hits'>
             <pre class="search-hit-text search-hit-description">{{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}</pre>
             <pre class="search-hit-text search-hit-code">{{#helpers.highlight}}{ "attribute": "code_snippet" }{{/helpers.highlight}}</pre>
           </div>`,
