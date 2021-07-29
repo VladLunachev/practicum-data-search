@@ -36,7 +36,7 @@ function start() {
   if (document.querySelector('html').lang == 'en') {
     var indexName = 'practicum_data_us_search';
     var placeholder = 'Forgot something? Search here!';
-    var empty = `<div class="markdown markdown_type_theory markdown_size_small"><p class="search-empty">Sorry. No snippets on this topic yet. Send a messege to <a class="note-link" target="_blank" href='https://rebrand.ly/learning-support'> learning support</a></p></div>`;
+    var empty = `<div class="markdown markdown_type_theory markdown_size_small"><p class="search-empty">Sorry. No snippets on this topic yet. Send a messege to <a class="search-note-link" target="_blank" href='https://rebrand.ly/learning-support'> learning support</a></p></div>`;
     document.querySelector('#search').innerHTML = `
     <div id="search-container">
       <svg class="ais-SearchBox-submitIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
@@ -47,23 +47,23 @@ function start() {
     <button id="close-search" title="Click to close or press Esc.">✕</button>
     </div>
     <div id="hits-container">
-      <div id="note">
-        <div id="note-card" class="markdown markdown_type_theory markdown_size_small">
-          <span class="note-title"><b>A note on memorization strategy:</b></span>
-          <p class="note-text">Understanding code logic, their concepts, and actions that you want to perform with them is more important than memorizing specific code syntax. Feel free to use the search bar and notes right away if you can't remember something, and don't feel bad about it. This knowledge will settle in your memory as you go through this course. <a class="note-link" href="https://rebrand.ly/memorization-strategy-explainer" target="_blank">You can watch this 5-minute video that explains it in more detail.</a></p>
+      <div id="search-note">
+        <div id="search-note-card" class="markdown markdown_type_theory markdown_size_small">
+          <span class="search-note-title"><b>A note on memorization strategy:</b></span>
+          <p class="search-note-text">Understanding code logic, their concepts, and actions that you want to perform with them is more important than memorizing specific code syntax. Feel free to use the search bar and notes right away if you can't remember something, and don't feel bad about it. This knowledge will settle in your memory as you go through this course. <a class="search-note-link" href="https://rebrand.ly/memorization-strategy-explainer" target="_blank">You can watch this 5-minute video that explains it in more detail.</a></p>
           <br>
-          <span class="note-title"><b>You can search here for any:</b></span>
-          <p class="note-text">● action you want to perform (like "add element" or "count unique values")<br> ● part of code (like "loc" or "format")<br> ● term that we use in our course materials (like "variable" or "library")<br></p>
+          <span class="search-note-title"><b>You can search here for any:</b></span>
+          <p class="search-note-text">● action you want to perform (like "add element" or "count unique values")<br> ● part of code (like "loc" or "format")<br> ● term that we use in our course materials (like "variable" or "library")<br></p>
           <br>
-          <span class="note-title"><a class="note-link" href="https://rebrand.ly/clipboardfusion" target="_blank"><b>Also, you can try out the stand-alone app for creating a searchable personal knowledge base.</b></a></span>
+          <span class="search-note-title"><a class="search-note-link" href="https://rebrand.ly/clipboardfusion" target="_blank"><b>Also, you can try out the stand-alone app for creating a searchable personal knowledge base.</b></a></span>
           <br>
           <br>
-          <span class="note-title"><b>Keyboard shortcuts:</b></span>
-          <p class="note-text">[ Ctrl+; ] to activate search <br> [ Ctrl+' ] to hide search <br> [ Esc ] to close search results <br> [ Shift+Enter ] to run code (search will automatically close) <br> [ Ctrl+Enter ] to submit answer (search will automatically close)</p>
+          <span class="search-note-title"><b>Keyboard shortcuts:</b></span>
+          <p class="search-note-text">[ Ctrl+; ] to activate search <br> [ Ctrl+' ] to hide search <br> [ Esc ] to close search results <br> [ Shift+Enter ] to run code (search will automatically close) <br> [ Ctrl+Enter ] to submit answer (search will automatically close)</p>
         </div>
-        <div id="note-spacer"></div>
+        <div id="search-note-spacer"></div>
       </div>
-      <div id="hits"></div>
+      <div id="search-hits"></div>
     </div>
     `;
   } 
@@ -72,7 +72,7 @@ function start() {
   else {
     var indexName = 'practicum_data_ru_search';
     var placeholder = 'Поиск';
-    var empty = `<div class="markdown markdown_type_theory markdown_size_small"><p class="search-empty">Sorry. No snippets on this topic yet. Send a messege to <a class="note-link" target="_blank" href='https://rebrand.ly/learning-support'> learning support</a></p></div>`;
+    var empty = `<div class="markdown markdown_type_theory markdown_size_small"><p class="search-empty">Sorry. No snippets on this topic yet. Send a messege to <a class="search-note-link" target="_blank" href='https://rebrand.ly/learning-support'> learning support</a></p></div>`;
     document.querySelector('#search').innerHTML = `
     <div id="search-container">
       <svg class="ais-SearchBox-submitIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
@@ -83,22 +83,22 @@ function start() {
     <button id="close-search" title="Click to close or press Esc.">✕</button>
     </div>
     <div id="hits-container">
-      <div id="note">
-        <div id="note-card" class="markdown markdown_type_theory markdown_size_small">
-          <span class="note-title"><b>A note on memorization strategy:</b></span>
-          <p class="note-text">Understanding code logic, their concepts, and actions that you want to perform with them is more important than memorizing specific code syntax. Feel free to use the search bar and notes right away if you can't remember something, and don't feel bad about it. This knowledge will settle in your memory as you go through this course. <a class="note-link" href="https://www.youtube.com/watch?v=vP2MNhC_Igw&t=19s" target="_blank">You can watch this 5-minute video that explains it in more detail.</a></p>
+      <div id="search-note">
+        <div id="search-note-card" class="markdown markdown_type_theory markdown_size_small">
+          <span class="search-note-title"><b>A note on memorization strategy:</b></span>
+          <p class="search-note-text">Understanding code logic, their concepts, and actions that you want to perform with them is more important than memorizing specific code syntax. Feel free to use the search bar and notes right away if you can't remember something, and don't feel bad about it. This knowledge will settle in your memory as you go through this course. <a class="search-note-link" href="https://www.youtube.com/watch?v=vP2MNhC_Igw&t=19s" target="_blank">You can watch this 5-minute video that explains it in more detail.</a></p>
           <br>
-          <span class="note-title"><b>You can search here for any:</b></span>
-          <p class="note-text">● action you want to perform (like "add element" or "count unique values")<br> ● part of code (like "loc" or "format")<br> ● term that we use in our course materials (like "variable" or "library")<br></p>
+          <span class="search-note-title"><b>You can search here for any:</b></span>
+          <p class="search-note-text">● action you want to perform (like "add element" or "count unique values")<br> ● part of code (like "loc" or "format")<br> ● term or abbreviation that we use in our course materials (like "variable" or "df")<br></p>
           <br>
-          <span class="note-title"><a class="note-link" href="https://www.notion.so/praktikum/ClipboardFusion-8fe44a7fc2774e30b6947d098dec5484" target="_blank"><b>Also, you can try out the stand-alone app for creating a searchable personal knowledge base.</b></a></span>
+          <span class="search-note-title"><a class="search-note-link" href="https://www.notion.so/praktikum/ClipboardFusion-8fe44a7fc2774e30b6947d098dec5484" target="_blank"><b>Also, you can try out the stand-alone app for creating a searchable personal knowledge base.</b></a></span>
           <br>
           <br>
-          <span class="note-title"><b>Keyboard shortcuts:</b></span>
-          <p class="note-text">[ Ctrl+; ] to activate search <br> [ Ctrl+' ] to hide search <br> [ Esc ] to close search results <br> [ Shift+Enter ] to run code (search will automatically close) <br> [ Ctrl+Enter ] to submit answer (search will automatically close)</p>
+          <span class="search-note-title"><b>Keyboard shortcuts:</b></span>
+          <p class="search-note-text">[ Ctrl+; ] to activate search <br> [ Ctrl+' ] to hide search <br> [ Esc ] to close search results <br> [ Shift+Enter ] to run code (search will automatically close) <br> [ Ctrl+Enter ] to submit answer (search will automatically close)</p>
         </div>
       </div>
-      <div id="hits"></div>
+      <div id="search-hits"></div>
     </div>
     `;
   }
@@ -140,8 +140,8 @@ function start() {
       templates: {
         item: `
           <div class='hits'>
-            <pre class="hit-text hit-description">{{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}</pre>
-            <pre class="hit-text hit-code">{{#helpers.highlight}}{ "attribute": "code_snippet" }{{/helpers.highlight}}</pre>
+            <pre class="search-hit-text search-hit-description">{{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}</pre>
+            <pre class="search-hit-text search-hit-code">{{#helpers.highlight}}{ "attribute": "code_snippet" }{{/helpers.highlight}}</pre>
           </div>`,
         empty: empty,
       },

@@ -32,9 +32,6 @@ input[type='search']::-webkit-search-results-decoration {
   font-size: 14px;
   color: #949494;
 }
-
-/*------------------ search icon -----------------*/
-
 .ais-SearchBox-submitIcon path {
   margin: 0;
   width: 100%;
@@ -50,6 +47,7 @@ input[type='search']::-webkit-search-results-decoration {
   cursor: pointer;
 }
 .search-empty {
+  margin: 0;
   font-size: 15px;
 }
 
@@ -68,29 +66,6 @@ input[type='search']::-webkit-search-results-decoration {
   font-family: YS Text, Arial, Helvetica, sans-serif;
   cursor: pointer;
 }
-#close {
-  font-size: 14px;
-  color: #949494;
-  /* padding-bottom: 3px; */
-}
-
-/*------------------ CF promo and links -----------------*/
-
-#promo {
-  background-color: white;
-  width: 100%;
-  margin: 0 0 4px;
-  /* padding: 1px 0 1px; */
-}
-#cf {
-  margin: 2px;
-  padding-bottom: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
 
 /*------------------ hits -----------------*/
 
@@ -105,12 +80,12 @@ input[type='search']::-webkit-search-results-decoration {
 #hits-container::-webkit-scrollbar {
   width: 0; /* width of the entire scrollbar */
 }
-#note {
+#search-note {
   background-color: #f7f9fc;
   height: 100%;
   padding-bottom: 1px;
 }
-#note-card {
+#search-note-card {
   margin: 10px 10px 9px;
   padding: 18px;
   padding-top: 12px;
@@ -118,28 +93,28 @@ input[type='search']::-webkit-search-results-decoration {
   border-radius: 4px;
   border: 1px solid #dfe5ee;
 }
-#note-spacer {
+#search-note-spacer {
   width: 100%;
   height: 1px;
 }
-.note-title {
+.search-note-title {
   font-size: 15px;
   margin: 0;
   padding: 0;
 }
-.note-text {
+.search-note-text {
   position: relative;
   padding: 0;
   margin: 0;
 }
-a.note-link:link,
-a.note-link:visited,
-a.note-link:hover,
-a.note-link:active {
+a.search-note-link:link,
+a.search-note-link:visited,
+a.search-note-link:hover,
+a.search-note-link:active {
   color: #2b2b2b;
   text-decoration: underline;
 }
-#hits {
+#search-hits {
   height: 351px;
   background-color: #f7f9fc;
   z-index: 200;
@@ -162,30 +137,23 @@ a.note-link:active {
   border-radius: 4px;
   border: 1px solid #dfe5ee;
 }
-p {
-  margin: 0;
-  white-space: normal;
-}
-.hit-text {
+.search-hit-text {
   margin: 0;
   padding: 0;
   white-space: normal;
 }
-pre {
-  margin: 0;
-}
-.hit-description,
-.hit-code {
+.search-hit-description,
+.search-hit-code {
   padding: 3px;
   font-size: 13px;
   white-space: pre-wrap;
 }
-.hit-description {
+.search-hit-description {
   font-style: italic;
   color: #5c6370;
 }
 .ais-Highlight-highlighted {
-  background-color: hsl(115, 100%, 78%);
+  background-color: hsl(0, 0%, 100%);
 }
 /* seems like they changed highlighting style */
 em {
@@ -197,7 +165,7 @@ em {
 }
 .ais-Hits--empty {
   margin: 10px;
-  padding: 20px;
+  padding: 10px 17px;
   background-color: white;
   border-radius: 4px;
   border: 1px solid #dfe5ee;
