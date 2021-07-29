@@ -1,6 +1,8 @@
 // russian lang test:
 // document.querySelector('html').lang = "ru"
 
+//more changes for latest version?
+
 document.addEventListener('keyup', init);
 
 function init(e) {
