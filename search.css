@@ -66,7 +66,6 @@ input[type='search']::-webkit-search-results-decoration {
   color: var(--search-icons-placeholder-color);
   border: 0;
   padding-left: 10px;
-  /* padding-top: 2px; */
   position: absolute;
   top: 6px;
   right: 6px;
@@ -79,14 +78,12 @@ input[type='search']::-webkit-search-results-decoration {
 
 #hits-container {
   background-color: var(--lg-background);
-  /* display: none; */
-  /* border: 1px solid grey; */
   flex-direction: column;
   overflow-y: auto;
   z-index: 200;
 }
 #hits-container::-webkit-scrollbar {
-  width: 0; /* width of the entire scrollbar */
+  width: 0;
 }
 #search-note {
   background-color: var(--lg-background);

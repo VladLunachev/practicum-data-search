@@ -1,6 +1,8 @@
 // russian lang test
 // document.querySelector('html').lang = "ru"
 
+/*===================================*/
+
 document.addEventListener('keyup', init);
 
 function init(e) {
@@ -18,12 +20,7 @@ function init(e) {
     }
   });
 }
-
-document.addEventListener('keyup', (e) => {
-  if (e.ctrlKey && e.code == 'Quote') {
-    hide();
-  }
-});
+/*===================================*/
 
 function start() {
   var searchSection = document.createElement('section');
@@ -67,7 +64,7 @@ function start() {
     </div>
     `;
   } else {
-  /*================== ENG to RU + change rebrandly links to RU sources =================*/
+    /*================== ENG to RU + change rebrandly links to RU sources =================*/
     var indexName = 'practicum_data_ru_search';
     var placeholder = 'Поиск';
     var empty = `<div class="markdown markdown_type_theory markdown_size_small"><p class="search-empty">Sorry. No snippets on this topic yet. Send a messege to <a class="search-note-link" target="_blank" href='https://rebrand.ly/learning-support'> learning support</a></p></div>`;
@@ -182,12 +179,6 @@ function start() {
     hits.style.display = 'flex';
   });
 
-  document.addEventListener('keyup', (e) => {
-    if (e.code == 'Escape' || (e.shiftKey && e.key == 'Enter') || (e.ctrlKey && e.key == 'Enter')) {
-      closeSearch();
-    }
-  });
-
   function closeSearch() {
     hits.style.display = 'none';
     document.querySelector('.ais-SearchBox-form').reset();
@@ -203,7 +194,26 @@ function start() {
   document.querySelector('section.trainer-footer').style.marginBottom = '40px';
   document.querySelector('section.trainer-footer').style.zIndex = 250;
 
-  console.log('search loaded');
+  /*================== shortcuts =================*/
+
+  document.addEventListener('keyup', (e) => {
+    if (e.code == 'Escape' || (e.shiftKey && e.key == 'Enter') || (e.ctrlKey && e.key == 'Enter')) {
+      closeSearch();
+    }
+  });
+
+  // document.addEventListener('keyup', (e) => {
+  //   if (e.ctrlKey && e.code == 'Semicolon') {
+  //     show();
+  //     document.querySelector('.ais-SearchBox-input').focus();
+  //   }
+  // });
+
+  document.addEventListener('keyup', (e) => {
+    if (e.ctrlKey && e.code == 'Quote') {
+      hide();
+    }
+  });
 }
 
 function hide() {
