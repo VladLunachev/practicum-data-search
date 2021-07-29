@@ -36,7 +36,7 @@ function start() {
   if (document.querySelector('html').lang == 'en') {
     var indexName = 'practicum_data_us_search';
     var placeholder = 'Forgot something? Search here!';
-    var empty = `<div class="markdown markdown_type_theory markdown_size_small"><p class="search-empty">Sorry. No snippets on this topic yet. Send a message to <a class="search-note-link" target="_blank" href='https://rebrand.ly/learning-support'> learning support</a></p></div>`;
+    var empty = `<div class="markdown markdown_type_theory markdown_size_small"><p class="search-empty">Sorry. No snippets on this topic yet. You can <a class="search-note-link" target="_blank" href='https://rebrand.ly/learning-support'>ask our learning support</a> about it.</p></div>`;
     document.querySelector('#search').innerHTML = `
     <div id="search-container">
       <svg class="ais-SearchBox-submitIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
