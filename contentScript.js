@@ -1,4 +1,4 @@
-// russian lang test
+// russian lang test:
 // document.querySelector('html').lang = "ru"
 
 document.addEventListener('keyup', init);
