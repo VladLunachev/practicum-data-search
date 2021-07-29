@@ -36,7 +36,7 @@ function start() {
   if (document.querySelector('html').lang == 'en') {
     var indexName = 'practicum_data_us_search';
     var placeholder = 'Forgot something? Search here!';
-    var empty = `<div class="markdown markdown_type_theory markdown_size_small"><p class="search-empty">Sorry. No snippets on this topic yet. Send a messege to <a class="search-note-link" target="_blank" href='https://rebrand.ly/learning-support'> learning support</a></p></div>`;
+    var empty = `<div class="markdown markdown_type_theory markdown_size_small"><p class="search-empty">Sorry. No snippets on this topic yet. Send a message to <a class="search-note-link" target="_blank" href='https://rebrand.ly/learning-support'> learning support</a></p></div>`;
     document.querySelector('#search').innerHTML = `
     <div id="search-container">
       <svg class="ais-SearchBox-submitIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
@@ -66,10 +66,8 @@ function start() {
       <div id="search-hits"></div>
     </div>
     `;
-  } 
+  } else {
   /*================== ENG to RU + change rebrandly links to RU sources =================*/
-
-  else {
     var indexName = 'practicum_data_ru_search';
     var placeholder = 'Поиск';
     var empty = `<div class="markdown markdown_type_theory markdown_size_small"><p class="search-empty">Sorry. No snippets on this topic yet. Send a messege to <a class="search-note-link" target="_blank" href='https://rebrand.ly/learning-support'> learning support</a></p></div>`;
@@ -155,10 +153,6 @@ function start() {
   ]);
 
   search.start();
-
-  // надо скрывать хиты на старте, а то путают. поиск с чистого листа
-
-  // возможно надо будет написать новыю рендер функцию
 
   var searchBar = document.querySelector('.ais-SearchBox-input');
   var hits = document.querySelector('#hits-container');
