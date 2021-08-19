@@ -80,7 +80,7 @@ input[type='search']::-webkit-search-results-decoration {
   background-color: var(--lg-background);
   flex-direction: column;
   overflow-y: auto;
-  z-index: 200;
+  z-index: 90;
 }
 #hits-container::-webkit-scrollbar {
   width: 0;
@@ -175,10 +175,10 @@ em {
 }
 
 /* temp class for hljs-comment */
-.search-hit-description {
+/* .search-hit-description {
   font-style: italic;
   color: #5c6370;
-}
+} */
 /* .hljs-string {
   color: #32a846;
 }
