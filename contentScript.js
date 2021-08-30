@@ -124,13 +124,7 @@ function startSearch() {
 
   const searchClient = algoliasearch(
     'JAGBS2F5BN',
-    // '4bcd001dfae68e583fe1e651bad00297' // prod
-    '84c9cda45d17f24ac906a87d81e75408'
-    // {
-    //   headers: {
-    //     'X-Algolia-UserToken': '678910',
-    //   },
-    // }
+    '4bcd001dfae68e583fe1e651bad00297' // prod
   );
   const search = instantsearch({
     indexName: indexName,
